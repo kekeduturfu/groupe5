@@ -18,8 +18,8 @@ pipeline {
             steps {
                 script {
                     // Construit une image Docker avec un tag unique basé sur le numéro du build Jenkins
-                    sudo docker.build -t "${IMAGE_NAME}:${env.BUILD_NUMBER}" .
-                  
+                    sudo docker.build("${IMAGE_NAME}:${env.BUILD_NUMBER}")
+                }
             }
         }
 
